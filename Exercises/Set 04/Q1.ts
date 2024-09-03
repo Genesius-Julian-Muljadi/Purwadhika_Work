@@ -6,6 +6,8 @@
 
 // Parameters : height → triangle height
 
+// We will assume output is a single string
+
 function trinumerate (height: number) {
     if (height < 1) {                                           // Height must be >= 1
         console.log("Please input integer >= 1");
@@ -30,4 +32,5 @@ function trinumerate (height: number) {
     return countn;
 };
 
-trinumerate(5);
+console.log(trinumerate(5));
+console.log(trinumerate(4));

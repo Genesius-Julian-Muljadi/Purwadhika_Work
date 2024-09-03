@@ -1,6 +1,9 @@
 // Write a function to split a string and convert it into an array of words
 // Example : “Hello World” → [“Hello”, “World”]
 
+/* We will assume output array will be devoid of values containing only whitespace, in case input string has
+multiple whitespace characters in a row */
+
 function separate (inputstr: string) {
     let outputarray: Array<string> = [];
     let len: number = inputstr.length;
@@ -25,5 +28,5 @@ function separate (inputstr: string) {
     return outputarray;
 };
 
-separate("hello       world hi   test123");
-separate("In the beginning God created the heaven and the earth.")
+console.log(separate("hello       world hi   test123"));
+console.log(separate("In the beginning God created the heaven and the earth."));

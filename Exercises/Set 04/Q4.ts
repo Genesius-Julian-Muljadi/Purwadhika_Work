@@ -12,5 +12,6 @@ function evenize (array: Array<number>) {
     return arrayn;
 };
 
-evenize([1,2,3,4,15,17,18,19,20]);
-evenize([3,5,7,9,11,33,71,99]);
+console.log(evenize([]));
+console.log(evenize([1,2,3,4,15,17,18,19,20]));
+console.log(evenize([3,5,7,9,11,33,71,99]));
