@@ -11,4 +11,8 @@ for (let i = 2; i <= Math.sqrt(p); i++) { // Only need to check up to square roo
     } else continue;
 };
 
+if (p <= 1) {  // Exception cases
+    ps = "is not a prime number"
+};
+
 console.log(`${p} ${ps}`);
