@@ -5,7 +5,7 @@
 // We will also assume ties will produce output 'Draw'
 
 function rps(input: string) {
-    let rpsval: Array<string> = ["rock", "paper", "scissors"];
+    const rpsval: Array<string> = ["rock", "paper", "scissors"];
     const rand: number = Math.floor(3 * Math.random());
     const pick: string = rpsval[rand];
     console.log(pick);  // Check output with Quokka

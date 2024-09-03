@@ -45,7 +45,7 @@ function dupsum(array: Array<number>) {
             output += array[i];  // Add to output only if array value found in duparray
         };
     };
-    console.log(output);  // Check output with Quokka
+    // console.log(output);  // Check output with Quokka
     return output;
 };
 
