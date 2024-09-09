@@ -28,3 +28,4 @@ function bmi (weight: number, height: number) {
 
 console.log(bmi(80, 1.8));
 console.log(bmi(85, 1.78));
+console.log(bmi(80, 1.79));
