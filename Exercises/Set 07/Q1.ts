@@ -10,6 +10,11 @@
 // Output: true
 
 function objectsareequal(o1: Object, o2: Object): boolean {
+    // Return false if objects have different number of members
+    if (Object.keys(o1).length !== Object.keys(o2).length) {
+        return false;
+    };
+
     let index1: number = 0;  // Objects are not indexable, so we'll keep track of indexes manually
     let index2: number = 0;
 
@@ -28,22 +33,16 @@ function objectsareequal(o1: Object, o2: Object): boolean {
         index2 = 0;
     };
 
-    for (let n in o2) {
-        index2++;
-    };
-    if (index1 !== index2) {  // Above process can still think objects match when objects have different number of keys.
-        return false;  // This ensures objects with different "lengths" are considered different
-    };
-
     return true;
 };
 
-console.log(objectsareequal({}, {}));
-console.log(objectsareequal({}, {a: 1}));
-console.log(objectsareequal({a: 1}, {}));
-console.log(objectsareequal({a: 1, b: 5}, {a: 1, b: 5}));
-console.log(objectsareequal({a: 1, b: 5}, {b: 5, a: 1}));
-console.log(objectsareequal({a: 1, b: 5}, {a: 1}));
-console.log(objectsareequal({a: 1}, {a: 1, b: 5}));
-console.log(objectsareequal({a: 1, b: 5}, {a: 1, c: 5}));
-console.log(objectsareequal([2, 3], [2, 3]));
+console.log(objectsareequal({}, {}));  // true
+console.log(objectsareequal({}, {a: 1}));  // false
+console.log(objectsareequal({a: 1}, {}));  // false
+console.log(objectsareequal({a: 1, b: 5}, {a: 1, b: 5}));  // true
+console.log(objectsareequal({a: 1, b: 5}, {a: 1, b: 500}));  // false
+console.log(objectsareequal({a: 1, b: 5}, {b: 5, a: 1}));  // false
+console.log(objectsareequal({a: 1, b: 5}, {a: 1}));  // false
+console.log(objectsareequal({a: 1}, {a: 1, b: 5}));  // false
+console.log(objectsareequal({a: 1, b: 5}, {a: 1, c: 5}));  // false
+console.log(objectsareequal([2, 3], [2, 3]));  // true

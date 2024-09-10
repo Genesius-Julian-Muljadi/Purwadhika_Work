@@ -100,15 +100,14 @@ function dupfindobj(o1: Object, o2: Object): Object {
     return output;
 };
 
-console.log(dupfindobj({ a: 1, b: 2 }, { a: 1, c: 3 }));
-console.log(dupfindobj({ a: 1, b: 2, c: 3 }, { a: 1, c: 3, b: 2 }));
-console.log(dupfindobj({ a: 1, b: 2, c: 3 }, { a: 1, c: 3 }));
-console.log(dupfindobj({ c: 3, a: 1, d: 4 }, { a: 1, b: 2, c: 3, d: 70 }));
-console.log(dupfindobj(
+console.log(dupfindobj({ a: 1, b: 2 }, { a: 1, c: 3 }));  // { a: 1 }
+console.log(dupfindobj({ a: 1, b: 2, c: 3 }, { a: 1, c: 3, b: 2 }));  // { a: 1, b: 2, c: 3 }
+console.log(dupfindobj({ a: 1, b: 2, c: 3 }, { a: 1, c: 3 }));  // { a: 1, c: 3 }
+console.log(dupfindobj({ c: 3, a: 1, d: 4 }, { a: 1, b: 2, c: 3, d: 70 }));  // { c: 3, a: 1 }
+console.log(dupfindobj(  // {}
     { name: "\"Reckless\" Barry", health: 100, power: 10},
     { name: "Cutthroat Dave", health: 125, power: 13}));
 
-console.log(dupfindobj(
+console.log(dupfindobj(  // { health: 215, power: 25 }
     { name: "Daren, the Healer in Armor", health: 215, power: 25},
     { name: "Hadrik, the Dwarf", health: 215, power: 25}));
-
