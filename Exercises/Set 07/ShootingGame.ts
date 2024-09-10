@@ -25,7 +25,7 @@ Show winner name
 */
 
 class Player {
-    name: string;
+    readonly name: string;
     health: number = 100;
     power: number = 10;
 
@@ -57,8 +57,8 @@ class Player {
 };
 
 class ShootingGame {
-    p1: Player;
-    p2: Player;
+    private p1: Player;
+    private p2: Player;
 
     constructor (player1: Player, player2: Player) {
         this.p1 = player1;

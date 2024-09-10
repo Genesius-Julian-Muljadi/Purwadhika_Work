@@ -9,7 +9,7 @@
 // Input :  { a: 1 } & { a: 1 }
 // Output: true
 
-function objectsareequal(o1: Object, o2: Object) {
+function objectsareequal(o1: Object, o2: Object): boolean {
     let index1: number = 0;  // Objects are not indexable, so we'll keep track of indexes manually
     let index2: number = 0;
 
@@ -46,3 +46,4 @@ console.log(objectsareequal({a: 1, b: 5}, {b: 5, a: 1}));
 console.log(objectsareequal({a: 1, b: 5}, {a: 1}));
 console.log(objectsareequal({a: 1}, {a: 1, b: 5}));
 console.log(objectsareequal({a: 1, b: 5}, {a: 1, c: 5}));
+console.log(objectsareequal([2, 3], [2, 3]));
