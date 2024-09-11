@@ -89,14 +89,9 @@ function dupfindobj(o1: Object, o2: Object): Object {
     // Prepare output
     let output: Object = {};
     for (let i=0;i<d.length;i++) {
-        Object.defineProperty(output, d[i][0], {  // Object.defineProperty is like the object version of Array.push
-            value: d[i][1],
-            writable: true,
-            enumerable: true,
-            configurable: true,
-        });
+        output[d[i][0]] = d[i][1];
     };
-    
+
     return output;
 };
 
