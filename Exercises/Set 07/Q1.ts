@@ -46,3 +46,6 @@ console.log(objectsareequal({a: 1, b: 5}, {a: 1}));  // false
 console.log(objectsareequal({a: 1}, {a: 1, b: 5}));  // false
 console.log(objectsareequal({a: 1, b: 5}, {a: 1, c: 5}));  // false
 console.log(objectsareequal([2, 3], [2, 3]));  // true
+console.log(objectsareequal([2, 3], [2, 4]));  // false
+console.log(objectsareequal(['hello world'], ['hello world']));  // true
+console.log(objectsareequal([0, 1], [0, '1']));  // false
