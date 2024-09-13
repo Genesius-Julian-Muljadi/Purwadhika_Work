@@ -19,6 +19,7 @@ function kvswap(a: Array<Object>): Array<Object> {
 
 console.log(kvswap([]));  // []
 console.log(kvswap([{a: 1}, {b: 2, c: 'C'}, {}]));  // [ { 1: 'a' }, { 2: 'b', C: 'c' }, {} ]
+console.log(kvswap([{b: 2, c: 'C', a: 1}]));  // [ { 1: 'a', 2: 'b', C: 'c' } ]
 console.log(kvswap([{true: 't', f: false}]));  // [ { t: 'true', false: 'f' } ]
 console.log(kvswap([{u: undefined, n: null}]));  // [ { underfined: 'u', null: 'n' } ]
 console.log(kvswap([{arr: ['h', 3, 'l', 'l', 0]}]));  // [ { 'h,3,l,l,0': 'arr' } ]
