@@ -31,7 +31,7 @@ function stonks(arr: Array<number>): number {
     return sofarmax;
 };
 
-console.log(stonks([99]));
+console.log(stonks([99]));  // 0
 console.log(stonks([7,1,5,3,6,4]));  // 5
 console.log(stonks([7,6,4,3,1]));  // 0
 console.log(stonks([5, 15, 7, 4, 8, 16, 1, 11, 12]));  // 12
