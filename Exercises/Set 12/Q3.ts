@@ -42,7 +42,8 @@ function pascalT(numRows: number): Array<Array<number>> {
         return mathFactorial(n) / (mathFactorial(k) * mathFactorial(n - k));
     };
 
-    const output: Array<Array<number>> = [[1]];
+    // The elements for each row i are just the coefficients for the binomial expansions of degree i
+    const output: Array<Array<number>> = [[1]];  // Start with degree 0 expansion, because mathChoose cannot accept 0 as first input
     for (let i = 1; i < numRows; i++) {
         const t: Array<number> = [];
         for (let j = 0; j <= i; j++) {

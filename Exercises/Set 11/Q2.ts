@@ -10,9 +10,11 @@
 // Output: 1
 
 function singleOut(arr: Array<number>): number {
+    // Sorting the array makes things easier
     const sortarr: Array<number> = arr.sort((a: number, b: number) => a - b);
     let candidate: number | undefined = sortarr.pop();
 
+    // Check elements two-at-a-time for equivalence
     while (sortarr.length > 0) {
         const c: number | undefined = sortarr.pop();
         if (candidate === c) {

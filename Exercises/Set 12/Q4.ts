@@ -14,15 +14,20 @@
 // We will assume array is not empty and all input array elements are positive
 
 function stonks(arr: Array<number>): number {
+    // Keep track of current maximum profit margin
     let sofarmax: number = 0;
+    // Keep track of current lowest buy price
     let currnum: number = arr[0];
 
     for (let i = 1; i < arr.length; i++) {
+        // If buy price is lower, change to new buy price
+        // Any profit records broken after will always be better than keeping previous buy prices
         if (arr[i] < currnum) {
             currnum = arr[i];
             continue;
         };
 
+        // Record new highest profit margin
         if (arr[i] - currnum > sofarmax) {
             sofarmax = arr[i] - currnum;
         };

@@ -12,6 +12,8 @@
 // Input : AB
 // Output : 28
 
+// We will assume input is a valid Excel column label
+
 function XLColNum(col: string): number {
     let output: number = 0;
     

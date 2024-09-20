@@ -19,7 +19,7 @@ function isAnagram(s: string, t: string): boolean {
         .filter((val: string) => !/\s/.test(val))
         .sort((a: string, b: string) => a.charCodeAt(0) - b.charCodeAt(0));
 
-    // If strings have different number of characters non-whitespace characters, return false
+    // If strings have different number of characters of non-whitespace characters, return false
     if (ss.length !== tt.length) {
         return false;
     };

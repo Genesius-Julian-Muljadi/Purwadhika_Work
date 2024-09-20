@@ -49,6 +49,8 @@ function climbCount12(input: number): number {
     };
 
     // Start calculating output
+    // Start with base case of taking steps of all 1s
+    // Gradually replace pairs of 1s with 2s and calculate all permutations
     let output: number = 0;
     for (let i = 0; i <= input / 2; i++) {
         output += mathChoose(input - i, i);
