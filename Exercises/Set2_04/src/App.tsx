@@ -6,7 +6,7 @@ function App() {
   // function addNewTask() {
   //   const input: string = String(document.getElementById("todotextbox").innerText);
   //   const newElement = document.createElement("div");
-  //   newElement.className = "grid grid-cols-3";
+  //   newElement.className = "flex flex-row";
   //   newElement.appendChild(document.createElement("div"));
   //   const newElementToDo = document.createElement("p");
   //   newElementToDo.textContent = input;
