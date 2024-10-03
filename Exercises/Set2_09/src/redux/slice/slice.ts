@@ -1,18 +1,32 @@
-// import { createSlice } from "@reduxjs/toolkit";
-// import { IUser } from "../../interfaces/iuser";
+import { createSlice } from "@reduxjs/toolkit";
+import { IUser } from "../../interfaces/iuser";
 
-// const initialState = [] as IUser[]
+export interface IuSlice {
+    users: Array<IUser>
+};
+interface O {
+    payload: IUser  // property must be named payload
+};
+interface O2 {
+    payload: Array<IUser>
+}
 
-// const usersSlice = createSlice({
-//     name: "uSlice",
-//     initialState,
-//     // initialState: [] satisfies Array<IUser> as Array<IUser>,
-//     reducers: {
-//         newUser: (state: Array<IUser>, input: IUser) => {
-//             // state.push(input);
-//         },
-//     },
-// });
+const initialState = {
+    users: []
+};
 
-// export const { newUser } = usersSlice.actions;
-// export default usersSlice;
+const usersSlice = createSlice({
+    name: "uSlice",
+    initialState,
+    reducers: {
+        newUser: (state: IuSlice, input: O) => {
+            state.users.push(input.payload);
+        },
+        initialize: (state: IuSlice, input: O2) => {
+            state.users = input.payload;
+        }
+    },
+});
+
+export const { newUser, initialize } = usersSlice.actions;
+export default usersSlice.reducer;

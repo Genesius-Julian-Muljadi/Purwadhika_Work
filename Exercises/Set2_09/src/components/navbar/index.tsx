@@ -1,23 +1,11 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { IuSlice } from "../../redux/slice/slice";
 
 export default function NavBar() {
-    const [c, setc] = useState(0);
-
-    const getUsers = async function() {
-        try {
-            const { data } = await axios.get("https://66fd3bd6c3a184a84d1991eb.mockapi.io/api/v1/users");
-            setc(data.length);
-
-        } catch(err) {
-            console.log(err);
-        };
-    };
-
-    useEffect(() => {
-        getUsers()
-    });
+    let u = useSelector(
+        (state: { uSlice: IuSlice }) => state.uSlice.users
+    );
 
     return (
         <div className="h-16 bg-teal-400 grid grid-cols-10">
@@ -28,7 +16,7 @@ export default function NavBar() {
             <div className="col-start-4 row-start-1 m-auto font-bold">
                 <Link to="/register">Register</Link>
             </div>
-            <div className="col-start-8 row-start-1 m-auto font-bold">Users: {c}</div>
+            <div className="col-start-8 row-start-1 m-auto font-bold">Users: {u.length}</div>
         </div>
     );
 };

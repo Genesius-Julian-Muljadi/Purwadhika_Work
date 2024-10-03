@@ -1,15 +1,19 @@
 import NavBar from "../navbar";
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import axios from "axios";
 import { IUser } from "../../interfaces/iuser";
+import { initialize } from "../../redux/slice/slice";
 
 export default function Users() {
     const [users, setUsers] = useState<Array<IUser>>([]);
+    const dispatch = useDispatch();
 
     const getUsers = async function() {
         try {
             const { data } = await axios.get("https://66fd3bd6c3a184a84d1991eb.mockapi.io/api/v1/users");
             setUsers(data);
+            dispatch(initialize(data))
         } catch(err) {
             console.log(err);
         };

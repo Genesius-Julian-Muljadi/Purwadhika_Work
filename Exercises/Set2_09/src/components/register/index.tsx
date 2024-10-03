@@ -3,16 +3,20 @@ import { Formik, Form, Field, FormikProps } from "formik";
 import axios from "axios";
 import Schema from "./schema";
 import { IUser } from "../../interfaces/iuser";
+import { useDispatch } from "react-redux";
+import { newUser } from "../../redux/slice/slice";
 
 export default function Register() {
+    const dispatch = useDispatch();
+
     const postUser = async (params: IUser) => {
         try {
             await axios.post("https://66fd3bd6c3a184a84d1991eb.mockapi.io/api/v1/users", {
                 name: params.name,
                 email: params.email,
                 password: params.password,
-            }
-            );
+            });
+            dispatch(newUser(params));
         } catch(err) {
             console.log(err);
         };
