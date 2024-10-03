@@ -6,7 +6,7 @@ export default {
       keyframes: {
         extend: {
           '0%': { transform: 'translateX(0rem)' },
-          '40%': { transform: 'translateX(3rem)' },
+          '40%': { transform: 'translateX(3rem)'},
           '100%': { transform: 'scale(3, 1)' },
         },
         fade90: {
