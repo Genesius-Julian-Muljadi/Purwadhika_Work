@@ -92,7 +92,7 @@ function App() {
           <p className="text-xl font-bold">Chores ToDo List</p>
         </div>
         <div className="static mt-5 text-white flex flex-row px-24">
-          <div className="basis-1/12 pt-1.5 pl-1" id="checkboxdiv">
+          <div className="basis-1/12 pt-1.5 pl-1" id="checkboxdiv1">
             <input type="checkbox" className="appearance-none rounded-sm outline outline-green-500 outline-2 size-4 hover:bg-green-800 checked:appearance-auto checked:accent-green-500"
               onClick={CheckToCount}></input>
           </div>
@@ -105,7 +105,7 @@ function App() {
           </div>
         </div>
         <div className="static mt-5 text-white flex flex-row px-24">
-          <div className="basis-1/12 pt-1.5 pl-1">
+          <div className="basis-1/12 pt-1.5 pl-1" id="checkboxdiv2">
             <input type="checkbox" className="appearance-none rounded-sm outline outline-green-500 outline-2 size-4 hover:bg-green-800 checked:appearance-auto checked:accent-green-500"
               onClick={CheckToCount}></input>
           </div>
