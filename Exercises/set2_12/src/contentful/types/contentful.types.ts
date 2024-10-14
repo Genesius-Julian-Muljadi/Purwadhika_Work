@@ -5,6 +5,8 @@ export interface TypeBlogFields {
     slug?: EntryFieldTypes.Symbol;
     body: EntryFieldTypes.RichText;
     image?: EntryFieldTypes.AssetLink;
+    author?: EntryFieldTypes.Symbol;
+    postDate?: EntryFieldTypes.Symbol;
 }
 
 export type TypeBlogSkeleton = EntrySkeletonType<TypeBlogFields, "blog">;
